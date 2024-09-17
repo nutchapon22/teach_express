@@ -1,9 +1,7 @@
 import express, { Request, Response, Router } from 'express';
+import { PrismaClient } from "@prisma/client";
 
 const router = Router();
-
-router.get('/todo', (req: Request, res: Response) => {
-    res.send('Hello it from TodoRoute');
-});
+const prisma = new PrismaClient();
 
 export default router;

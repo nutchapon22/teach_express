@@ -7,7 +7,10 @@ app.get('/', (req: Request, res: Response) => {
     res.send('Hello, TypeScript with Express!');
 });
 
+app.use(express.json());
+
 app.use('/api', TodoRoute);
+
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
